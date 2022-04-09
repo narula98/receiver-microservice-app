@@ -20,6 +20,7 @@ public class TransactionController {
 	
 	@PostMapping(path="/receiver")
 	public ResponseEntity<Transaction> decryptTransactionObject(@RequestBody Transaction transactionObject) {
+		System.out.println("In receiever controller");
 		return transactionService.receieveTransaction(transactionObject);
 	}
 	
